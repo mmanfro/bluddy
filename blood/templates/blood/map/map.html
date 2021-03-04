@@ -120,33 +120,33 @@
 
         async function favorite(action, id) {
             
-            document.getElementById(action ? 'nonFavorite'+id : 'favorite'+id).style.display = 'none';
-            document.getElementById(action ? 'favorite'+id : 'nonFavorite'+id).style.display = '';
+            document.getElementById(action ? 'nonFavorite'+id : 'favorite'+id).style.display = 'none'
+            document.getElementById(action ? 'favorite'+id : 'nonFavorite'+id).style.display = ''
 
             // Loading
-            const loading = document.getElementById("loading");
-            loading.style.display = 'block';
+            const loading = document.getElementById("loading")
+            loading.style.display = 'block'
             await wait(2000);
-            loading.style.display = 'none';
+            loading.style.display = 'none'
 
             /*
                 Toast notification
             */
 
             // Get the toast DIV
-            const toast = document.getElementById("toast");
+            const toast = document.getElementById("toast")
 
             // Try  to hide (maybe it's visible)
-            toast.className.replace("show", "");
+            toast.className.replace("show", "")
 
             // Change message between 'added' and 'removed' favorite
-            toast.innerHTML = action ? 'Adicionado aos favoritos!' : 'Removido dos favoritos';
+            toast.innerHTML = action ? 'Adicionado aos favoritos!' : 'Removido dos favoritos'
 
             // Add the "show" class to DIV
-            toast.className = "show";
+            toast.className = "show"
 
             // After 2 seconds, remove the show class from DIV
-            timer = setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 2000);
+            timer = setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 2000)
         }
     </script>
 
