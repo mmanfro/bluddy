@@ -1,1 +1,1 @@
-web: gunicorn bluddy.wsgi
+web: gunicorn bluddy.wsgi --log-file -
