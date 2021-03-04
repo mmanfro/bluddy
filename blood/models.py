@@ -5,11 +5,13 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
 
+# 1 to 1 relation with Django's default user model
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     bio = models.TextField(max_length=200, blank=True)
      
+    # Static blood types list
     blood_types = [
         ('AB+', 'AB+'),
         ('AB-', 'AB-'),

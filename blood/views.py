@@ -8,3 +8,6 @@ def map(request):
 
 def profile(request):
     return render(request, 'blood/profile/profile.html')
+
+def rewards(request):
+    return render(request, 'blood/rewards/rewards.html')

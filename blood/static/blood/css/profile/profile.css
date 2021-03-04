@@ -3,7 +3,17 @@ th, td {
     width: 45%;
 }
 
-#qrCode {
+#camera {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* #qrCode {
     display: none;
     position: absolute;
     width: 100%;
@@ -14,8 +24,9 @@ th, td {
     text-align: center;
     line-height: 100%;
     background: white;
+    opacity: 0.9;
 }
 
 .qrCode {
     margin-top: 40%;
-}
+} */
