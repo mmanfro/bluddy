@@ -1,0 +1,6 @@
+.place {
+    padding: 2%;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 10px 0 10px 0;
+    height: 4em;
+}
