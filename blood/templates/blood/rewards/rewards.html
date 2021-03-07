@@ -8,7 +8,7 @@
 {% block content %}
 
     <!-- Order by -->
-    <div style="position: absolute; height: 35px; width: 100%; background-color: white;">
+    <div style="position: absolute; height: 35px; width: 98.5%; background-color: white;">
         <form method="post" style="width: calc(100% - 70px); float: left;">
             {% csrf_token %}
 
@@ -26,12 +26,12 @@
     </div>
 
     <!-- Rewards list -->
-    <div style="overflow: auto; height: 100%; padding-top: 50px">
+    <div class="overflowHiddenButFunctional" style="overflow: auto; height: 100%; padding-top: 50px">
         {% for x in '01234567891011121314151617181920' %}
             <span style="font-size: 18px;">Restaurantes</span>
             <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
                 {% for x in '012345678' %}
-                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                    <div class="" style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
                         <img src="https://1.bp.blogspot.com/-CVnkIRDUo70/Ws1SlqjX4qI/AAAAAAABqBQ/oBg2BaIfs98YSDVCdrawr_OvD7GU4E2IwCLcBGAs/s1600/out%2Blogo.jpg" 
                             style="width: 100%;"/>
                         <br>

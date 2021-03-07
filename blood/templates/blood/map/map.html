@@ -10,7 +10,8 @@
     <!-- Dynamic search input -->
     <input id="search" class="form-control" placeholder="Buscar" type="text" onkeyup="search()" style="position: absolute; height: 35px; width: 97.5%">
 
-    <div id="places" style="overflow: auto; height: 100%; padding-top: 40px">
+    <!-- Places list -->
+    <div id="places" class="overflowHiddenButFunctional">
         <div class="place">
             <div style="float: left;  display: flex; flex-direction: column; align-items: center; margin-right: 10px; width: 50px">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -30,8 +31,10 @@
                 </svg>
                 <span style="font-size: 14px; color: var(--complementary-color)">4,6km</span>
             </div>
-            <div style=" height: 100%; display: flex; align-items:center; justify-content:center;">
-                <span name="placeName" style="font-size: 16px; width: 100%;">Hospital Arcanjo</span>
+            <div style="height: 100%; display: flex; align-items:center; justify-content:center;">
+                <a style="width: 100%;" target="_blank" href="http://maps.google.com/?q=Banco de Sangue de São Paulo">
+                    <span name="placeName" style="font-size: 16px; ">Banco de Sangue de São Paulo</span>
+                </a>
                 <div onclick="favorite(true, '{{x}}')" id="nonFavorite{{x}}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary-color)" class="bi bi-star" viewBox="0 0 16 16"
                         style="margin-top: -2.5%">
@@ -69,7 +72,9 @@
                     <span style="font-size: 14px; color: var(--complementary-color)">11,2km</span>
                 </div>
                 <div style=" height: 100%; display: flex; align-items:center; justify-content:center;">
-                    <span name="placeName" style="font-size: 16px; width: 100%;">Banco de Sangue Santo Antônio da Patrulha</span>
+                    <a style="width: 100%;" target="_blank" href="http://maps.google.com/?q=Banco de Sangue - Unidade Einstein Morumbi">
+                        <span name="placeName" style="font-size: 16px;">Banco de Sangue - Unidade Einstein Morumbi</span>
+                    </a>
                     <div onclick="favorite(true, '{{x}}')" id="nonFavorite{{x}}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary-color)" class="bi bi-star" viewBox="0 0 16 16"
                             style="margin-top: -2.5%">
