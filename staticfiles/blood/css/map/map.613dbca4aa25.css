@@ -1,0 +1,14 @@
+/* Places list */
+#places {
+    overflow: auto;
+    height: 100%;
+    padding-top: 40px;
+}
+
+/* Each place */
+.place {
+    padding: 2%;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 10px 0 10px 0;
+    height: 4em;
+}

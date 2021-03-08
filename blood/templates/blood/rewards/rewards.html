@@ -19,25 +19,62 @@
             </select>
         </form>
         <button onclick="filter('open')" style="border: none; background: none; margin-left: 5px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="var(--secondary-color)" class="bi bi-funnel-fill" viewBox="0 0 16 16">
-                <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
-            </svg>
+            {% include '../svg/filter.svg' %}
         </button>
     </div>
 
     <!-- Rewards list -->
     <div class="overflowHiddenButFunctional" style="overflow: auto; height: 100%; padding-top: 50px">
-        {% for x in '01234567891011121314151617181920' %}
+        {% for x in '01234' %}
             <span style="font-size: 18px;">Restaurantes</span>
             <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
-                {% for x in '012345678' %}
-                    <div class="" style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
-                        <img src="https://1.bp.blogspot.com/-CVnkIRDUo70/Ws1SlqjX4qI/AAAAAAABqBQ/oBg2BaIfs98YSDVCdrawr_OvD7GU4E2IwCLcBGAs/s1600/out%2Blogo.jpg" 
-                            style="width: 100%;"/>
+                {% for x in '0123456' %}
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                        <img src="https://1.bp.blogspot.com/-CVnkIRDUo70/Ws1SlqjX4qI/AAAAAAABqBQ/oBg2BaIfs98YSDVCdrawr_OvD7GU4E2IwCLcBGAs/s1600/out%2Blogo.jpg" width="100%"/>
                         <br>
-                        <span style="font-size: 14px; color: var(--complementary-color)">15 pontos</span>
+                        <span style="font-size: 14px; color: var(--complementary-color);">15 pontos</span>
                         <br>
                         <span style="font-size: 14px;">Bloomin' Onion & Kokaburra Wings 2 por 1</span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <span style="font-size: 18px;">Entretenimento</span>
+            <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
+                {% for x in '0123456' %}
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                        <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" width="100%"/>
+                        <br>
+                        <span style="font-size: 14px; color: var(--complementary-color)">10 pontos</span>
+                        <br>
+                        <span style="font-size: 14px;">1 mês grátis de Netflix!</span>
+                    </div>
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                        <img src="https://www.flixmedia.com.br/assets/images/parceiros/logo-gnc.png" width="100%"/>
+                        <br>
+                        <span style="font-size: 14px; color: var(--complementary-color);">A partir de 10 pontos</span>
+                        <br>
+                        <span style="font-size: 14px;">Ingressos para sala comum ou 3D</span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <span style="font-size: 18px;">Urbano</span>
+            <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
+                {% for x in '0123456' %}
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" width="100%"/>
+                        <br>
+                        <span style="font-size: 14px; color: var(--complementary-color)">1 ponto = 1 real</span>
+                        <br>
+                        <span style="font-size: 14px;">Cupom de desconto Uber</span>
+                    </div>
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                        <img src="https://www.abcdacomunicacao.com.br/wp-content/uploads/unidas_logo-baixa.png" width="100%"/>
+                        <br>
+                        <span style="font-size: 14px; color: var(--complementary-color)">30 pontos</span>
+                        <br>
+                        <span style="font-size: 14px;">3 diárias grátis!</span>
                     </div>
                 {% endfor %}
             </div>
@@ -73,14 +110,11 @@
             Filtrar
         </button>
         <button onclick="filter('filter')" id="filtrar" style="border: none; background: none; color: var(--primary-color); position: absolute; top: 5; right: 5;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
+            {% include '../svg/close.svg' %}
         </button>
     </div>
 
-     <script>
+    <script type="text/javascript">
 
         // Open filters div
         function filter(action) {
@@ -98,7 +132,6 @@
                 }
 
             } 
-            
         }
     </script>
 {% endblock  %}

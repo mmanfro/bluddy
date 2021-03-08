@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'blood/home.html')
+    return render(request, 'blood/home/home.html')
 
 def map(request):
     return render(request, 'blood/map/map.html')
