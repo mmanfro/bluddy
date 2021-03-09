@@ -14,7 +14,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     full_name = models.CharField(_('full name'), null=False, blank=False, max_length=128)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
     avatar = models.ImageField(upload_to='blood/avatars/', null=True, blank=True)
-    date_birth = models.DateField(_('date of birth'), null=True)
+    date_birth = models.DateField(_('date of birth'), null=True, blank=True)
     
     # Static gender list
     GENDERS = [
