@@ -6,7 +6,9 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from blood.UserManager import UserManager
 from django.utils.translation import ugettext_lazy as _
 
-
+# Not using Django's own user class for 2 reasons:
+# 1- I do not need a 'username'
+# 2- I need the e-mail to be the auth token
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('e-mail'), null=False, blank=False, unique=True)
     full_name = models.CharField(_('full name'), null=False, blank=False, max_length=128)
