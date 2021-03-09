@@ -3,7 +3,7 @@ from django import forms
 from django.core.mail import send_mail
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.base_user import AbstractBaseUser
-from blood.UserManager import UserManager
+from blood.managers import UserManager
 from django.utils.translation import ugettext_lazy as _
 
 # Not using Django's own user class for 2 reasons:
