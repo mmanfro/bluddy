@@ -7,7 +7,7 @@
 
 {% block content %}
     <!-- Header -->
-    <div style="margin-left: 5px; height: fit-content; text-align: center;">
+    <div style="margin: 0 0 25px 5px; height: fit-content; text-align: center;">
 
         <!-- Share button -->
         {% include '../svg/share.svg' %}
@@ -24,20 +24,13 @@
         <span style="font-size: 72px; margin-left: 10px; color: var(--secondary-color)">AB-</span>
 
         <!-- Name -->
-        <span style="font-size: 24px;">Fulano de Tal Souza Silva de Moura Santos mais nove</span>
-
-        <br>
-
-        <!-- Username -->
-        <span style="font-size: 16px; font-style: italic; color: var(--complementary-color)">fulaninho29</span>
+        <span style="font-size: 24px;"><strong>Fulano de Tal Souza Silva de Moura Santos</strong></span>
     </div>
 
-    <!-- Bio -->
+    {% comment %} <!-- Bio -->
     <p style="margin: 5px; padding: 5px; border-top: 1px solid var(--secondary-color); border-bottom: 1px solid var(--secondary-color); text-align: justify; border-radius: 5px;">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus venenatis tellus a pellentesque. Cras sed justo nulla. Cras sed nisl fringilla, eleifend nibh sed, tristique nisi. Fusce blandit.
-    </p>
-
-    <br>
+    </p> {% endcomment %}
 
     <!-- Count info -->
     <table style="width: 100%;">
@@ -53,8 +46,8 @@
         </thead>
         <tbody>
             <tr>
-                <td><span style="font-weight: bold;">350</span> pontos para você utilizar!</td>
-                <td><span style="font-weight: bold;">6</span> doações de sangue!</td>
+                <td><span><strong>350</strong></span> pontos para você utilizar!</td>
+                <td><span><strong>6</strong></span> doações de sangue!</td>
             </tr>
         </tbody>
     </table>
@@ -91,7 +84,7 @@
     <br>
     <br>
 
-    <a href="{% url 'login' %}"><button type="button" class="btn btn-outline-primary btn-lg" style="width: -webkit-fill-available; margin: 5px">
+    <a href="{% url 'logout' %}"><button type="button" class="btn btn-outline-primary btn-lg" style="width: -webkit-fill-available; margin: 5px">
         {% include '../svg/leave.svg' %}
         Logout
     </button></a>

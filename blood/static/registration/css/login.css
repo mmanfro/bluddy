@@ -1,0 +1,19 @@
+label {
+    display: none;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+.alert {
+    font-size: 12px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.errorlist {
+    list-style-type: none;
+    margin-bottom: 5px;
+    text-align: left;
+}

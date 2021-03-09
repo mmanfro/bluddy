@@ -1,0 +1,23 @@
+select[name="blood_type"] {
+    width: 55px;
+}
+
+input[type="date"] {
+    width: 180px;
+}
+
+p {
+    text-align: left;
+}
+
+.alert {
+    font-size: 12px;
+    padding: 0;
+    margin-top: -15px;
+}
+
+.errorlist {
+    list-style-type: none;
+    margin-bottom: 5px;
+    text-align: left;
+}

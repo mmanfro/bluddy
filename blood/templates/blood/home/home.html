@@ -6,20 +6,20 @@
 {% endblock %}
 
 {% block content %}
-    <p style="color: var(--complementary-color); margin-bottom: -5px; text-align: right;">Bem-vindo, Fulano!</p>
+    <p style="color: var(--complementary-color); margin-bottom: -5px; text-align: right;">Bem-vindo, {{ name }}!</p>
 
     <!-- Banners -->
     <span style="font-size: 18px; font-weight: bold; border-top: 2px solid var(--primary-color); border-bottom: 2px solid var(--primary-color)">Destaques</span>
-    <img src="{% static 'blood/promo2.png' %}" width="100%" style="border: 1px solid var(--complementary-color); border-radius: 5px; box-shadow: 0 2px 5px 0; margin: 10px 0 10px 0;">
-    <img src="{% static 'blood/promo.png' %}" width="100%" style="margin: 0 0 10px 0; border: 1px solid var(--complementary-color); border-radius: 5px; box-shadow: 0 2px 5px 0;">
+    <img src="{% static 'blood/promo2.png' %}" width="100%" style="border: 1px solid var(--complementary-color); border-radius: 5px; box-shadow: 0 1px 5px 0; margin: 10px 0 10px 0;">
+    <img src="{% static 'blood/promo.png' %}" width="100%" style="margin: 0 0 10px 0; border: 1px solid var(--complementary-color); border-radius: 5px; box-shadow: 0 1px 5px 0;">
 
-    <div class="new">
+    <div class="highlight">
         <img src="{% static 'blood/promo4.png' %}" width="20%" style="margin: 0 0 10px 0; border: 1px solid var(--complementary-color); border-radius: 5px; float: left;">
         <a href="#" target="_blank" style="margin-left: 10px; margin-bottom: 5px">Conheça a história de Carlos, que teve uma nova chance graças a ajuda de pessoas como você!</a>
     </div>
     <br>
     <span style="font-size: 18px; font-weight: bold; border-top: 2px solid var(--primary-color); border-bottom: 2px solid var(--primary-color)">Novidades</span>
-    {% for x in '01234567891011' %}
+    {% for x in '01234567' %}
         <div class="new">
             <span style="width: 90%">Novo benefício para você! Cupom mensal de 5 reais de desconto no 66Taxis!</span>
             {% include '../svg/open-external.svg' %}

@@ -4,7 +4,8 @@ from blood import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    path('auth/', include('django.contrib.auth.urls')),
+    path('', include('django.contrib.auth.urls')),
+    path('register/', v.register, name='register'),
     path('', v.home, name='home'),
     path('map/', v.map, name='map'),
     path('profile/', v.profile, name='profile'),

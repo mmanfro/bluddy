@@ -15,7 +15,7 @@ a, a:hover {
 #content {
     padding: 5px;
     overflow: auto;
-    height: calc(100% - 60px);
+    height: 100%;
 }
 
 .container-fluid {
