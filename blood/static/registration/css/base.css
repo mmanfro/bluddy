@@ -9,7 +9,7 @@ a, a:hover {
 }
 
 body {
-    background-image: url('../../blood/background-pattern.png');
+    background-color: #E77063 !important;
 }
 
 #body {
@@ -136,7 +136,7 @@ select option:checked {
 
     #body {
         margin: 1% auto;
-        border: 2px solid var(--primary-color);
+        border: 1px solid var(--primary-color);
         height: 800px;
         width: 375px;
         position: relative;
@@ -145,20 +145,45 @@ select option:checked {
     .nav-item { 
         margin-left: 0 auto;
     }
+
+    #desktopHeading {
+        display: block;
+    }
 }
 
-/* Mobile devices */
-@media (any-hover: none) and (min-device-width: 1024px) and (max-device-width: 2048px), (any-hover: none) and (orientation: landscape) {
+/* Bigger mobile devices (tablets, phone in landscape) */
+@media (any-hover: none) and (min-device-width: 1024px) and (max-device-width: 1512px), (any-hover: none) and (orientation: landscape) {
     body {
         background-color:#d8d8d8;
     }
 
     #body {
-        margin: 20% auto;
+        margin: 5% auto;
         border: 2px solid var(--primary-color);
         height: 812px;
         width: 375px;
         position: relative;
     }
+}
 
+/* Tablets with higher resolution, like Galaxy Tab S2 */
+@media (any-hover: none) and (min-device-width: 1512px) and (max-device-width: 2048px) {
+    body {
+        background-color:#d8d8d8;
+    }
+
+    #body {
+        margin: 5% auto;
+        border: 2px solid var(--primary-color);
+        height: 1256px;
+        width: 548px;
+        position: relative;
+    }
+}
+
+/* Mobile devices (phones) */
+@media (any-hover: none) and (max-device-width: 1100px) {
+    #desktopHeading {
+        display: none;
+    }
 }

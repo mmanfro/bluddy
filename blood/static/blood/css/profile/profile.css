@@ -1,6 +1,10 @@
-th, td {
+#content th, #content td {
     text-align: center;
-    width: 45%;
+    width: 50%;
+}
+
+#profileHeader th, #profileHeader td {
+    text-align: center;
 }
 
 #camera {

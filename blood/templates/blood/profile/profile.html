@@ -17,14 +17,23 @@
             {% include '../svg/edit.svg' %}
         </button>
 
-        <!-- Avatar -->
-        {% include '../svg/avatar.svg' %}
-
-        <!-- Blood type -->
-        <span style="font-size: 72px; margin-left: 10px; color: var(--secondary-color)">AB-</span>
-
-        <!-- Name -->
-        <span style="font-size: 24px;"><strong>Fulano de Tal Souza Silva de Moura Santos</strong></span>
+        <table id="profileHeader">
+            <tr>
+                <td>
+                    <!-- Avatar -->
+                    {% include '../svg/avatar.svg' %}
+        
+                    <!-- Blood type -->
+                    <span style="font-size: 52px; margin-left: 10px; color: var(--secondary-color)">AB-</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Name -->
+                    <span style="font-size: 24px;"><strong>Fulano de Tal Souza Silva de Moura Santos</strong></span>
+                </td>
+            </tr>
+        </table>
     </div>
 
     {% comment %} <!-- Bio -->

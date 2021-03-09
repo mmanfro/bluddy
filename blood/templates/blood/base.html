@@ -30,11 +30,38 @@
         {% block head %}{% endblock  %}
     </head>
     <body>
-        <script>
+        {% comment %} <script>
             window.onresize = function(){
                 var orientation = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
             };
-        </script>
+        </script> {% endcomment %}
+        <table id="desktopHeading" style="position: fixed; left: 20; top: 20; color: white;">
+            <tr>
+                <td>
+                    <img src="{% static 'blood/favicon.ico' %}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1>Bluddy</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><h3>Siga-nos nas redes sociais:</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="font-size: 24px"><i class="bi bi-instagram"></i> @bluddy</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="font-size: 24px"><i class="bi bi-twitter"></i> @bluddy</span>
+                </td>
+            </tr>
+        </table>
         <div id="body">
             <div id="content" class="overflowHiddenButFunctional">
                 {% block content %}{% endblock %}
