@@ -8,8 +8,13 @@ a, a:hover {
     color: var(--secondary-color);
 }
 
+body {
+    background-image: url('../../blood/background-pattern.png');
+}
+
 #body {
     background-color: white;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
 }
 
 #content {
