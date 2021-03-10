@@ -3,7 +3,7 @@
 
 {% url 'home' as home %}
 {% url 'map' as map %}
-{% url 'home' as home %}
+{% url 'campaign' as campaign %}
 {% url 'rewards' as rewards %}
 {% url 'profile' as profile %}
 
@@ -77,8 +77,8 @@
                 <div class="container-fluid">
                     <ul class="nav justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link{% if request.path == home %} active{% endif %}" aria-current="page" href="{{ home }}">
-                                {% include './svg/home.svg' %}
+                            <a class="nav-link{% if request.path == campaign %} active{% endif %}" aria-current="page" href="{{ home }}">
+                                {% include './svg/campaign.svg' %}
                             </a>
                         </li>
                         <li class="nav-item">

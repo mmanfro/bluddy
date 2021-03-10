@@ -1,5 +1,6 @@
 {% extends 'blood/base.html' %}
 {% load static %}
+{% load decrypt %}
 
 {% block head %}
     <link rel="stylesheet" href="{% static 'blood/css/profile/profile.css' %}" type="text/css" />
@@ -21,7 +22,11 @@
             <tr>
                 <td>
                     <!-- Avatar -->
-                    {% include '../svg/avatar.svg' %}
+                    {% if user.avatar %}
+                        <img width="125" height="125" src="{{ user.avatar.url }}" style="border-radius: 50%; box-shadow: 1px 1px 5px 0;">
+                    {% else %}
+                        {% include '../svg/avatar.svg' %}
+                    {% endif %}
         
                     <!-- Blood type -->
                     <span style="font-size: 52px; margin-left: 10px; color: var(--secondary-color)">AB-</span>
@@ -30,7 +35,13 @@
             <tr>
                 <td>
                     <!-- Name -->
-                    <span style="font-size: 24px;"><strong>Fulano de Tal Souza Silva de Moura Santos</strong></span>
+                    <span style="font-size: 24px;">
+                        <strong>
+                            {% with full_name=user.full_name|decrypt %}
+                                {{ full_name.full_name }}
+                            {% endwith %}
+                        </strong>
+                    </span>
                 </td>
             </tr>
         </table>
@@ -78,24 +89,24 @@
             </div>
         {% endfor %}
     </div>
-
+    <br>
     <!-- Scan button (opens camera/upload interface) -->
     <button onclick="scan()" type="button" class="btn btn-outline-primary btn-lg" style="width: -webkit-fill-available; margin: 5px;">
         {% include '../svg/heart.svg' %}
         Receber pontos
     </button>
-
-    <button type="button" class="btn btn-outline-primary btn-lg" style="width: -webkit-fill-available; margin: 5px">
+    {% comment %} <button type="button" class="btn btn-outline-primary btn-lg" style="width: -webkit-fill-available; margin: 5px">
         {% include '../svg/campaign.svg' %}
         Criar campanha
-    </button>
-
-    <br>
-    <br>
-
+    </button> {% endcomment %}
+    <br><br>
     <a href="{% url 'logout' %}"><button type="button" class="btn btn-outline-primary btn-lg" style="width: -webkit-fill-available; margin: 5px">
         {% include '../svg/leave.svg' %}
         Logout
+    </button></a>
+    <br><br><br><br>
+    <a href="#"><button type="button" class="btn btn-primary btn-lg" style="width: -webkit-fill-available; margin: 5px">
+        <span>Deletar perfil</span>
     </button></a>
 
     <div id="camera">

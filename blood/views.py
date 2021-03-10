@@ -22,7 +22,7 @@ def decrypt(**args):
     key = 'wgjSSyfVKgz0EjyTilqeJSaANLDu7TzHKdpAXUeZPbM='
     f = Fernet(key)
     decipher_args = {}
-    decipher_args['full_name'] = f.decrypt(full_name)
+    decipher_args['full_name'] = f.decrypt(full_name).decode('utf_8')
     return decipher_args 
 
 def register(request):
@@ -30,7 +30,7 @@ def register(request):
         form = UserCreationForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save(commit=False)
-            user.full_name = encrypt(full_name = user.full_name).get('full_name').decode('utf_8')
+            user.full_name = encrypt(full_name = user.full_name).get('full_name')
             user.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
@@ -45,11 +45,15 @@ def register(request):
 
 @login_required
 def home(request):
+    return redirect('campaign')
+
+
+def campaign(request):
     context = {}
-    name = decrypt(full_name = request.user.full_name).get('full_name').decode('utf_8')
+    name = decrypt(full_name = request.user.full_name).get('full_name')
     context['name'] = name.split(' ')[0]
 
-    return render(request, 'blood/home/home.html', context)
+    return render(request, 'blood/campaign/campaign.html', context)
 
 
 @login_required
