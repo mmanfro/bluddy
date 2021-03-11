@@ -29,16 +29,26 @@
             Criar Campanha
         </a>
     </div>
-    <div style="border-top: 2px solid var(--primary-color); margin: 40px 0 0 0;">
+    <div style="margin: 40px 0 0 0;">
         <span style="font-size: 18px; font-weight: bold;">Próximas a você</span>
     </div>
     <div class="campaign">
-        <div style="margin-right: 5px">
-            <small>No momento não existem campanhas perto de você</small>
+        <div style="margin-right: 5px;">
+            <img src="{% static 'blood/campaign3.png' %}" width="75" style="border-radius: 5px; float: left; margin-right: 10px">
+            <a href="#" target="_blank">
+                <strong style="color: var(--primary-color)">Por favor, ajude nosso Kevin</strong>
+                <br>
+                <small style="color: var(--secondary-color)">Kevin é uma alma caridosa da sociedade mineir...</small>
+            </a>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            {% include '../svg/open-external.svg' %}
+            <span style="font-size: 14px; color: var(--complementary-color)">4,6km</span>
         </div>
     </div>
+    {% comment %} <small>No momento não existem campanhas perto de você</small> {% endcomment %}
 
-    <div style="border-top: 2px solid var(--primary-color); margin: 20px 0 0 0;">
+    <div style="margin: 20px 0 0 0;">
         <span style="font-size: 18px; font-weight: bold;">Todas as campanhas</span>
     </div> 
     {% for x in '0123456' %}
@@ -51,7 +61,7 @@
                     <small style="color: var(--secondary-color)">Precisamos de sua ajuda para que a Gabi, filha da dona...</small>
                 </a>
             </div>
-                {% include '../svg/open-external.svg' %}
+            {% include '../svg/open-external.svg' %}
         </div>
         <div class="campaign">
             <div style="margin-right: 5px;">
@@ -62,7 +72,7 @@
                     <small style="color: var(--secondary-color)">Carlos Braga é um comerciante amado no bairro do Limo...</small>
                 </a>
             </div>
-                {% include '../svg/open-external.svg' %}
+            {% include '../svg/open-external.svg' %}
         </div>
     {% endfor %}
 {% endblock %}
