@@ -25,11 +25,30 @@
 
     <!-- Rewards list -->
     <div class="overflowHiddenButFunctional" style="overflow: auto; height: 100%; padding-top: 50px">
-        {% for x in '01234' %}
+        {% comment %} {% for x in '01234' %} {% endcomment %}
+            <div style="background-color: var(--secondary-color); border-color: var(--primary-color); padding: 5px 0 1px 5px;  border-radius: 3px; box-shadow: 0px 0px 5px 0px; margin-bottom: 5px;">
+                <span style="font-size: 18px; color: white;">Destaques</span>
+                <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; max-width: 35%; text-align: center; background-color: white">
+                        <img src="https://1.bp.blogspot.com/-CVnkIRDUo70/Ws1SlqjX4qI/AAAAAAABqBQ/oBg2BaIfs98YSDVCdrawr_OvD7GU4E2IwCLcBGAs/s1600/out%2Blogo.jpg" width="100%"/>
+                        <br>
+                        <span style="font-size: 14px; color: var(--complementary-color);">15 pontos</span>
+                        <br>
+                        <span style="font-size: 14px;">Bloomin' Onion & Kokaburra Wings 2 por 1</span>
+                    </div>
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; max-width: 35%; text-align: center; background-color: white">
+                        <img src="https://assets.blu365.com.br/wordpress/themes/wp-theme-blu365/shared/images/creditors/magalu.png" width="100%"/>
+                        <br><br>
+                        <span style="font-size: 14px; color: var(--complementary-color);">5 pontos</span>
+                        <br>
+                        <span style="font-size: 14px;">10% de desconto em todo site!</span>
+                    </div>
+                </div>
+            </div>
             <span style="font-size: 18px;">Restaurantes</span>
             <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
                 {% for x in '0123456' %}
-                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; max-width: 35%; text-align: center;">
                         <img src="https://1.bp.blogspot.com/-CVnkIRDUo70/Ws1SlqjX4qI/AAAAAAABqBQ/oBg2BaIfs98YSDVCdrawr_OvD7GU4E2IwCLcBGAs/s1600/out%2Blogo.jpg" width="100%"/>
                         <br>
                         <span style="font-size: 14px; color: var(--complementary-color);">15 pontos</span>
@@ -38,18 +57,31 @@
                     </div>
                 {% endfor %}
             </div>
+            
+            <span style="font-size: 18px;">Varejo</span>
+            <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
+                {% for x in '0123456' %}
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; max-width: 35%; text-align: center;">
+                        <img src="https://assets.blu365.com.br/wordpress/themes/wp-theme-blu365/shared/images/creditors/magalu.png" width="100%"/>
+                        <br>
+                        <span style="font-size: 14px; color: var(--complementary-color);">5 pontos</span>
+                        <br>
+                        <span style="font-size: 14px;">10% de desconto em todo site!</span>
+                    </div>
+                {% endfor %}
+            </div>
 
             <span style="font-size: 18px;">Entretenimento</span>
             <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
                 {% for x in '0123456' %}
-                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; max-width: 35%; text-align: center;">
                         <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" width="100%"/>
                         <br>
                         <span style="font-size: 14px; color: var(--complementary-color)">10 pontos</span>
                         <br>
                         <span style="font-size: 14px;">1 mês grátis de Netflix!</span>
                     </div>
-                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; max-width: 35%; text-align: center;">
                         <img src="https://www.flixmedia.com.br/assets/images/parceiros/logo-gnc.png" width="100%"/>
                         <br>
                         <span style="font-size: 14px; color: var(--complementary-color);">A partir de 10 pontos</span>
@@ -62,14 +94,14 @@
             <span style="font-size: 18px;">Urbano</span>
             <div style="display: flex; flex-wrap: nowrap; overflow-x: scroll; margin-bottom: 10px;">
                 {% for x in '0123456' %}
-                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; max-width: 35%; text-align: center;">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" width="100%"/>
                         <br>
                         <span style="font-size: 14px; color: var(--complementary-color)">1 ponto = 1 real</span>
                         <br>
                         <span style="font-size: 14px;">Cupom de desconto Uber</span>
                     </div>
-                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; text-align: center;">
+                    <div style="padding: 5px; margin-right: 5px; border: 1px solid var(--primary-color); border-radius: 5px; min-width: 35%; max-width: 35%; text-align: center;">
                         <img src="https://www.abcdacomunicacao.com.br/wp-content/uploads/unidas_logo-baixa.png" width="100%"/>
                         <br>
                         <span style="font-size: 14px; color: var(--complementary-color)">30 pontos</span>
@@ -78,7 +110,7 @@
                     </div>
                 {% endfor %}
             </div>
-        {% endfor %}
+        {% comment %} {% endfor %} {% endcomment %}
     </div>
 
     <!-- Filters -->

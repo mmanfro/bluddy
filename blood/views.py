@@ -64,6 +64,11 @@ def campaign(request):
 
 
 @login_required
+def campaign_new(request):
+    return render(request, 'blood/campaign/new_campaign.html')
+
+
+@login_required
 def map(request):
     return render(request, 'blood/map/map.html')
 

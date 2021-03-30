@@ -12,6 +12,7 @@ urlpatterns = [
     path('register/', v.register, name='register'),
     path('', v.home, name='home'),
     path('campaign/', v.campaign, name='campaign'),
+    path('campaign/new/', v.campaign_new, name='new_campaign'),
     path('map/', v.map, name='map'),
     path('profile/', v.profile, name='profile'),
     path('rewards/', v.rewards, name='rewards'),
