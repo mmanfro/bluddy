@@ -91,6 +91,9 @@ DATABASES = {
 # Custom user model
 AUTH_USER_MODEL = 'blood.User'
 
+# Custom auth backend
+AUTHENTICATION_BACKENDS = ['blood.backends.UserAuthBackend']
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
