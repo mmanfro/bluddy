@@ -7,7 +7,6 @@ class UserAuthBackend(ModelBackend):
         users = User.objects.all()
         for user in users:
             email = decrypt(email = user.email)['email']
-            print(email)
 
             if email == username:
                 return user
