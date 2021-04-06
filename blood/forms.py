@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UsernameField
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from blood.models import User
-import blood.views as v
+from blood import views as v
 
 
 UserModel = get_user_model()
