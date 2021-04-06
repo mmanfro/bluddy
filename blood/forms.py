@@ -2,8 +2,9 @@ from django import forms
 from django.contrib.auth import get_user_model, password_validation
 from django.contrib.auth.forms import UsernameField
 from django.core.exceptions import ValidationError
-from django.db.models.fields import DateField
 from django.utils.translation import gettext_lazy as _
+from blood.models import User
+import blood.views as v
 
 
 UserModel = get_user_model()
@@ -16,6 +17,7 @@ class UserCreationForm(forms.ModelForm):
     """
     error_messages = {
         'password_mismatch': _('The two password fields didn’t match.'),
+        'email_duplicate': _('This email address is already in use'),
     }
     password1 = forms.CharField(
         label=_("Password"),
@@ -45,6 +47,20 @@ class UserCreationForm(forms.ModelForm):
         
         for visible_field in self.visible_fields():
             visible_field.field.widget.attrs['class'] = 'form-control'
+
+    # Check if e-mail has already been used
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+
+        users = User.objects.all()
+        for user in users:
+            e = v.decrypt(email = user.email).get('email')
+            print(e)
+
+            if email.casefold() == e.casefold():
+                raise forms.ValidationError(self.error_messages['email_duplicate'], code='email_duplicate')
+            else:
+                return email
 
     def clean_password2(self):
         password1 = self.cleaned_data.get("password1")
