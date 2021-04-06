@@ -44,7 +44,8 @@ def register(request):
         form = UserCreationForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save(commit=False)
-            user.full_name = encrypt(full_name = user.full_name).get('full_name').decode('utf_8')
+            user.full_name = encrypt(full_name=user.full_name).get('full_name').decode('utf_8')
+            user.email = encrypt(email=user.email).get('email').decode('utf_8')
             user.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')

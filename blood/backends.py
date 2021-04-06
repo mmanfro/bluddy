@@ -6,7 +6,7 @@ class UserAuthBackend(ModelBackend):
     def authenticate(self, request, username, password, **kwargs):
         users = User.objects.all()
         for user in users:
-            email = decrypt(email = user.email).get('email')
+            email = decrypt(email=user.email).get('email')
 
             if email == username:
                 return user

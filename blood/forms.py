@@ -54,7 +54,7 @@ class UserCreationForm(forms.ModelForm):
 
         users = User.objects.all()
         for user in users:
-            e = v.decrypt(email = user.email).get('email')
+            e = v.decrypt(email=user.email).get('email')
             print(e)
 
             if email.casefold() == e.casefold():

@@ -6,5 +6,5 @@ register = template.Library()
 @register.filter
 def decrypt(value):
     return v.decrypt(
-        full_name = value
+        full_name=value
     )
