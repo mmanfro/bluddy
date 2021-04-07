@@ -5,4 +5,4 @@ Django web application and (future) PWA to incentivize blood donations.
 
 https://bluddy.herokuapp.com/
 
-Status: 35%
+Just needed to do the MVP but took the opportunity to study Django.
